@@ -11,8 +11,7 @@
 void setup() {
   // initialize all pins as INPUT_PULLUP
   for (uint8_t i = 0; i <= 23; i++) {
-    // not sure if we need to skip this - I cannot find any reference
-    // to pin 17 for the Leonardo
+    // not sure if we need to skip this - I cannot find any reference to pin 17
     if (i == 17) {
       continue;
     }
