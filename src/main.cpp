@@ -2,38 +2,26 @@
 
 #define DELAY_CONST 1000
 
+/**
+ * pin mapping
+ * 14   15  16
+ * MISO SCK MOSI
+ */
+
 void setup() {
-  // put your setup code here, to run once
+  // initialize all pins as INPUT_PULLUP
+  for (uint8_t i = 0; i <= 23; i++) {
+    // not sure if we need to skip this - I cannot find any reference
+    // to pin 17 for the Leonardo
+    if (i == 17) {
+      continue;
+    }
 
-  pinMode(0, INPUT_PULLUP);
-  pinMode(1, INPUT_PULLUP);
-  pinMode(2, INPUT_PULLUP);
-  pinMode(3, INPUT_PULLUP);
-  pinMode(4, INPUT_PULLUP);
-  pinMode(5, INPUT_PULLUP);
-  pinMode(6, INPUT_PULLUP);
-  pinMode(7, INPUT_PULLUP);
-  pinMode(8, INPUT_PULLUP);
-  pinMode(9, INPUT_PULLUP);
-  pinMode(10, INPUT_PULLUP);
-  pinMode(11, INPUT_PULLUP);
-  pinMode(12, INPUT_PULLUP);
-  pinMode(13, INPUT_PULLUP);
+    pinMode(i, INPUT_PULLUP);
+  }
 
-  pinMode(A0, INPUT_PULLUP);
-  pinMode(A1, INPUT_PULLUP);
-  pinMode(A2, INPUT_PULLUP);
-  pinMode(A3, INPUT_PULLUP);
-  pinMode(A4, INPUT_PULLUP);
-  pinMode(A5, INPUT_PULLUP);
-
-  pinMode(14, INPUT_PULLUP); //MISO
-  pinMode(15, INPUT_PULLUP); //SCK
-  pinMode(16, INPUT_PULLUP); //MOSI
-
-
+  // initialize USB connection
   Keyboard.begin();
-
 }
 
 void loop() {
