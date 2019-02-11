@@ -149,8 +149,4 @@ void loop() {
     Keyboard.write('D');
     delay(DELAY_CONST);
   }
-
-
-
-
 }
