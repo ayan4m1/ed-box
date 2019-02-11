@@ -25,8 +25,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
   if (digitalRead(0) == LOW) {
     Keyboard.write('0');
     delay(DELAY_CONST);
