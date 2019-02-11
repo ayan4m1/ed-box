@@ -71,38 +71,43 @@ void loop() {
 
   static boolean oldSwitchState1 = digitalRead(9);
   boolean newSwitchState1 = digitalRead(9);
-  if (newSwitchState1 != oldSwitchState1){
+  if (newSwitchState1 != oldSwitchState1) {
     oldSwitchState1 = newSwitchState1;
-  Keyboard.write('9');
-  delay(DELAY_CONST);}
+    Keyboard.write('9');
+    delay(DELAY_CONST);
+  }
 
   static boolean oldSwitchState2 = digitalRead(10);
   boolean newSwitchState2 = digitalRead(10);
-  if (newSwitchState2 != oldSwitchState2){
+  if (newSwitchState2 != oldSwitchState2) {
     oldSwitchState2 = newSwitchState2;
-  Keyboard.write('Q');
-  delay(DELAY_CONST);}
+    Keyboard.write('Q');
+    delay(DELAY_CONST);
+  }
 
   static boolean oldSwitchState3 = digitalRead(11);
   boolean newSwitchState3 = digitalRead(11);
-  if (newSwitchState3 != oldSwitchState3){
+  if (newSwitchState3 != oldSwitchState3) {
     oldSwitchState3 = newSwitchState3;
-  Keyboard.write('W');
-  delay(DELAY_CONST);}
+    Keyboard.write('W');
+    delay(DELAY_CONST);
+  }
 
   static boolean oldSwitchState4 = digitalRead(12);
   boolean newSwitchState4 = digitalRead(12);
-  if (newSwitchState4 != oldSwitchState4){
+  if (newSwitchState4 != oldSwitchState4) {
     oldSwitchState4 = newSwitchState4;
-  Keyboard.write('E');
-  delay(DELAY_CONST);}
+    Keyboard.write('E');
+    delay(DELAY_CONST);
+  }
 
   static boolean oldSwitchState5 = digitalRead(13);
   boolean newSwitchState5 = digitalRead(13);
-  if (newSwitchState5 != oldSwitchState5){
+  if (newSwitchState5 != oldSwitchState5) {
     oldSwitchState5 = newSwitchState5;
-  Keyboard.write('R');
-  delay(DELAY_CONST);}
+    Keyboard.write('R');
+    delay(DELAY_CONST);
+  }
 
   if (digitalRead(A0) == LOW) {
     Keyboard.write('T');
